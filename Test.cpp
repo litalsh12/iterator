@@ -102,7 +102,7 @@ int main() {
 
 	
     //Product:
-        testcase.setname(" TEST PRODUCT");
+        /*testcase.setname(" TEST PRODUCT");
 	    int temp=0;
 		string Check6[]={"0,h","0,e","0,l","0,l","0,o","1,h","1,e","1,l","1,l","1,o","2,h","2,e","2,l","2,l","2,o"};
         for (auto pair: product(range(0,3), string("hello")))
@@ -130,7 +130,7 @@ int main() {
 		testcase.CHECK_OUTPUT(pair,Check9[temp]);
 		temp++;
         }
-	    /*temp=0;
+	    temp=0;
 		string Check10[]={"a,d","a,e","a,f","a,g","a,h","b,d","b,e","b,f","b,g","b,h","c,d","c,e","c,f","c,g","c,h"};
         for (auto pair: product(range('a','d'), range('d','i')))
         {
