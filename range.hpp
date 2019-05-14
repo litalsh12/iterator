@@ -7,38 +7,38 @@ class range
 {
 
 private:
-    T start; // start
-    T fin;   // end
+    T start;
+    T end;  
 
     class iterator
     {
 
     public:
-  
-        T t_val;
-        iterator(T itr) : t_val(itr){}
+        T val;
+        iterator(T itr) : val(itr){}
 
         bool operator!=(range::iterator const &other) const
         { 
-            return t_val != (other.t_val);
+            return val!=(other.val);
         }
-
         T operator*() const
         {
-            return t_val;
+            return val;
         }
-
         range::iterator &operator++()
         {
-            ++t_val;
+            ++val;
             return *this;
-        }
-    };
-
+        }};
 public:
-    range(T from, T to) : start(from), fin(to) {}                     
-    range::iterator begin() const { return range::iterator(start); } 
-    range::iterator end() const { return range::iterator(fin); }      
+    range(T from, T to) : start(from), end(to) {
+     }                     
+    range::iterator begin() const { 
+       return range::iterator(start); 
+     } 
+    range::iterator end() const { 
+         return range::iterator(end); 
+     }      
 }; 
 
     

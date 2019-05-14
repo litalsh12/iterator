@@ -6,69 +6,56 @@ template <class A, class B>
 
 class chain
 {
-private:
-    A first;   
-    B second;    
-    
+   private:
+     A first;   
+     B second;    
     template <typename U, typename V>
     class iterator
     {
     public:
- 
-        U itr1; 
-        V itr2; 
+        U i_1; 
+        V i_2; 
 
-        bool flag;
-
-        iterator(U first, V second) : itr1(first), itr2(second), flag(true) {}
-
+        bool f;
+        iterator(U first, V second) : i_1(first), i_2(second), f(true) {}
         bool operator!=(chain::iterator<U,V> const &other) 
         {
-            if (flag && !(itr1 != (other.itr1)))
-                flag = false;
+            if (f && !(i_1 != (other.i_1))){
+                f = false;}
 
-            if(flag)
-                return (itr1 != (other.itr1));
-            else 
-                return (itr2 != (other.itr2));
-
-            
+            if(f){
+                return (i_1 != (other.i_1));}
+            else {
+                return (i_2 != (other.i_2));}
         }
 
-        decltype(*itr1) operator*() const
-        {
-            if(flag)
-                return *itr1;
-            else
-                return *itr2;
+        decltype(*i_1) operator*() const {
+            if(f){return *i_1;}     
+            else{ return *i_2;}       
         }
 
-        chain::iterator<U,V> &operator++()
-        {
-            if(flag)
-                ++itr1;
-            else 
-                ++itr2;
-            
+        chain::iterator<U,V> &operator++(){
+            if(f){++i_1;}     
+            else{++i_2;} 
             return *this;
         }
     };
 
-public:
-    chain(A from, B to) : first(from), second(to) {} // constructor
+    public:
+          chain(A from, B to) : first(from), second(to) { } 
+          auto begin() const{  return  chain::iterator<decltype(first.begin()),decltype(second.begin())>(first.begin(), second.begin()); }  
+          auto end() const {   return chain::iterator<decltype(first.end()),decltype(second.end())>(first.end(), second.end()); }    
+   };  
 
-    auto begin() const{ 
-        return  chain::iterator<decltype(first.begin()),decltype(second.begin())>(first.begin(), second.begin()); }  // iteratable object
 
-    auto end() const {
-        return chain::iterator<decltype(first.end()),decltype(second.end())>(first.end(), second.end()); }  // iteratable object  
-};  // class
+
+
 
 template <typename A, typename B>
 
-chain<A, B> mychain(A chain1, B chain2)
+chain<A, B> mychain(A chain_a, B chain_b)
 {
-    return mychain<A, B>(chain1, chain2);
+    return mychain<A, B>(chain_a, chain_b);
 }
 
 } 
