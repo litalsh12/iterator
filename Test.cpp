@@ -173,7 +173,7 @@ int main() {
         for (auto pair: zip(range('A','E'), range('a','e'))) {
 		testcase.CHECK_OUTPUT(pair,Check15[temp]);
 		temp++;
-}*/
+}
 
 	// PowerSet:
 	    testcase.setname(" Test PowerSet");
@@ -197,7 +197,7 @@ int main() {
 	  testcase.CHECK_OUTPUT(subset,Check18[temp]);
  	   temp++;
 }
-
+*/
 ////////////////////////////////// end_MyTest ////////////////////////////////////////
 
     grade = testcase.grade();
