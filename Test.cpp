@@ -151,8 +151,8 @@ int main() {
         }
 
         temp=0;
-		string Check12[]={"n,o","a,r","o,e","m,l","i,r"};
-        for (auto pair: zip(string("naomi"), string("orelr"))) {
+		string Check12[]={"l,y","i,i","t,n","a,o","l,n"};
+        for (auto pair: zip(string("lital"), string("yinon"))) {
 		testcase.CHECK_OUTPUT(pair,Check12[temp]);
 		temp++;
         }
