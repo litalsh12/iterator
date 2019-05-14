@@ -130,14 +130,14 @@ int main() {
 		testcase.CHECK_OUTPUT(pair,Check9[temp]);
 		temp++;
         }
-	    temp=0;
+	    /*temp=0;
 		string Check10[]={"a,d","a,e","a,f","a,g","a,h","b,d","b,e","b,f","b,g","b,h","c,d","c,e","c,f","c,g","c,h"};
         for (auto pair: product(range('a','d'), range('d','i')))
         {
 		testcase.CHECK_OUTPUT(pair,Check10[temp]);
 		temp++;
         }
-
+*/
      // Zip:
 		testcase.setname("Test Zip ");
         temp=0;
