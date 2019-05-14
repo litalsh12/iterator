@@ -118,7 +118,7 @@ int main() {
 		testcase.CHECK_OUTPUT(pair,Check7[temp]);
 		temp++;
         }
-		/*
+		
 	    temp=0;
 		string Check8[]={"h,1","h,2","h,3","h,4","e,1","e,2","e,3","e,4","l,1","l,2","l,3","l,4","l,1","l,2","l,3","l,4","o,1","o,2","o,3","o,4"};
         for (auto pair: product(string("hello"), range(1,5)))
@@ -126,6 +126,7 @@ int main() {
 		testcase.CHECK_OUTPUT(pair,Check8[temp]);
 		temp++;
         }
+		temp=0;
 		string Check9[]={"a,1","a,2","a,3","a,4","b,1","b,2","b,3","b,4","c,1","c,2","c,3","c,4","d,1","d,2","d,3","d,4","e,1","e,2","e,3","e,4"};
         for (auto pair: product(range('a','f'), range(1,5)))
         {
@@ -199,7 +200,7 @@ int main() {
 	  testcase.CHECK_OUTPUT(subset,Check18[temp]);
  	   temp++;
 }
-*/
+
 ////////////////////////////////// end_MyTest ////////////////////////////////////////
 
     grade = testcase.grade();
