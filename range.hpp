@@ -7,38 +7,38 @@ class range
 {
 
 private:
-    T start;
-    T end;  
+    T start; 
+    T fin;  
 
     class iterator
     {
 
     public:
-        T val;
-        iterator(T itr) : val(itr){}
+  
+        T t_val;
+        iterator(T itr) : t_val(itr){}
 
         bool operator!=(range::iterator const &other) const
         { 
-            return val!=(other.val);
+            return t_val != (other.t_val);
         }
+
         T operator*() const
         {
-            return val;
+            return t_val;
         }
+
         range::iterator &operator++()
         {
-            ++val;
+            ++t_val;
             return *this;
-        }};
+        }
+    };
+
 public:
-    range(T from, T to) : start(from), end(to) {
-     }                     
-    range::iterator begin() const { 
-       return range::iterator(start); 
-     } 
-    range::iterator end() const { 
-         return range::iterator(end); 
-     }      
+    range(T from, T to) : start(from), fin(to) {}                     
+    range::iterator begin() const { return range::iterator(start); } 
+    range::iterator end() const { return range::iterator(fin); }      
 }; 
 
     
@@ -49,4 +49,4 @@ range<T> myrange(T from, T to)
     return range<T>(from, to);
 }
 
-} 
+}
