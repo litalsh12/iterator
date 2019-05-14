@@ -137,7 +137,7 @@ int main() {
 		testcase.CHECK_OUTPUT(pair,Check10[temp]);
 		temp++;
         }
-*/
+
      // Zip:
 		testcase.setname("Test Zip ");
         temp=0;
@@ -146,7 +146,7 @@ int main() {
 		testcase.CHECK_OUTPUT(pair,Check11[temp]);
 		temp++;
         }
-
+*/
         temp=0;
 		string Check12[]={"n,o","a,r","o,e","m,l","i,r"};
         for (auto pair: zip(string("naomi"), string("orelr"))) {
