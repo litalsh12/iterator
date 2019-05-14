@@ -58,7 +58,7 @@ private:
     };
 
 public:
-    _zip(T from, E to) : iter_a(from), iter_a(to) {} 
+    _zip(T from, E to) : first(from), second(to) {} 
 
     auto begin() const{ 
         return  _zip::iterator<decltype(iter_a.begin()),decltype(iter_b.begin())>(iter_a.begin(), iter_b.begin()); }  
