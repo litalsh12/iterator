@@ -146,7 +146,7 @@ int main() {
 		testcase.CHECK_OUTPUT(pair,Check11[temp]);
 		temp++;
         }
-*/
+
         temp=0;
 		string Check12[]={"n,o","a,r","o,e","m,l","i,r"};
         for (auto pair: zip(string("naomi"), string("orelr"))) {
@@ -173,7 +173,7 @@ int main() {
         for (auto pair: zip(range('A','E'), range('a','e'))) {
 		testcase.CHECK_OUTPUT(pair,Check15[temp]);
 		temp++;
-}
+}*/
 
 	// PowerSet:
 	    testcase.setname(" Test PowerSet");
